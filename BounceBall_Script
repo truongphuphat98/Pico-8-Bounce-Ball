@@ -1,0 +1,29 @@
+-- variable --
+x=100
+y=80
+
+//time.delta time
+dx = -1 
+dy = -1
+
+function _draw()
+cls()
+rect(0,0,127,127,5)
+//circfill(x, y, 10, 200)
+spr(1,x,y)
+end
+
+function _update()
+x = x + dx
+y = y + dy
+
+if x < 2 or x > 118 then
+dx = -dx
+sfx(0)
+end
+
+if y < 2 or y > 118 then
+dy = -dy
+sfx(0)
+end
+	end
